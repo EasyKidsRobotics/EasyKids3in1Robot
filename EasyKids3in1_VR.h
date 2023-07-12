@@ -9,18 +9,24 @@ int vr(int setValue)
   return mapValue;
 }
 
-void servoTest(int setValue, int x, int y, uint32_t color)
-{
+void testServo(int pin){
+  display.setTextSize(4);
+  display.setCursor(65, 50);
+  display.setTextColor(TFT_MAGENTA);
+  display.println("Servo");
+  display.setTextColor(TFT_GREEN);
+  display.setCursor(75, 100);
+  display.println("Test");
   display.setTextFont(GLCD);
   display.setTextSize(4);
-  display.setCursor(x, y);
+  display.setCursor(88, 150);
   display.setTextColor(0x0);
   display.println(vrshow);
-  vrshow = vr(setValue);
+  vrshow = vr(180);
   display.setTextSize(4);
-  display.setCursor(x, y);
-  display.setTextColor(color);
+  display.setCursor(88, 150);
+  display.setTextColor(TFT_WHITE);
   display.println(vrshow);
-  servo(1,vrshow);
+  servo(pin,vrshow);
   delay(50);
 }

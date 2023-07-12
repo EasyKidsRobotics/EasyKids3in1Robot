@@ -124,7 +124,7 @@ void servo(int pin, uint16_t degree)
 // if so it uses for loop to move to position given in 'to' argument
 // speed of the move is controlled by delayTime smaller delay = faster move
 
-void servoSpeed(int servoNum, int delayTime, int to)
+void speedServo(int servoNum, int delayTime, int to)
 {
 
   if (currentPos[servoNum] == to)
