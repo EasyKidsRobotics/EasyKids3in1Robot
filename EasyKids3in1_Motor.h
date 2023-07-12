@@ -146,8 +146,6 @@ void motorStopAll()
   pwm.setPWM(7, 0, 4095);
 }
 
-
-
 // ------ Function Servo ------
 void servo(int pin, uint16_t degree)
 {
