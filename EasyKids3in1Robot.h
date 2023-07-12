@@ -8,18 +8,19 @@
 #include "EasyKids3in1_Switch.h"
 #include "EasyKids3in1_VR.h"
 #include "EasyKids3in1_PID.h"
-#include <Bluepad32.h>
+#include "EasyKids3in1_Controller.h"
 
-GamepadPtr joystick[BP32_MAX_GAMEPADS];
+
 
 void EasyKids_Setup(){
     Serial.begin(115200);
-    
     display.begin();
     displayClear();
-    rgbSetBrightness(20);
-    rgbFill(BLACK);
-    rgbFillCar(BLACK);
+    rgb.begin();
+    rgbCar.begin();
+    ledSetBrightness(20);
+    ledFillColor(BLACK);
+    ledCarFillColor(BLACK);
     pwm.begin();
     pinMode(sw, INPUT);
     pinMode(BUZZER, OUTPUT);
@@ -32,5 +33,11 @@ void EasyKids_Setup(){
     pwm.setPWM(5, 0, 0);
     pwm.setPWM(6, 0, 0);
     pwm.setPWM(7, 0, 0);
+    Serial.printf("Firmware: %s\n", BP32.firmwareVersion());
+    const uint8_t *addr = BP32.localBdAddress();
+    Serial.printf("BD Addr: %2X:%2X:%2X:%2X:%2X:%2X\n", addr[0], addr[1], addr[2],
+                addr[3], addr[4], addr[5]);
+    BP32.setup(&onConnectedGamepad, &onDisconnectedGamepad);
     delay(10);
 }
+

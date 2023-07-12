@@ -31,47 +31,47 @@ Adafruit_NeoPixel rgb(RGB_COUNT_BOARD, RGB_PIN_BOARD, NEO_GRB + NEO_KHZ800);
 Adafruit_NeoPixel rgbCar(RGB_COUNT_CAR, RGB_PIN_CAR, NEO_GRB + NEO_KHZ800);
 
 // ------ Function rgbSetBrightness ------
-void rgbSetBrightness(int value)
+void ledSetBrightness(int value)
 {
   rgb.setBrightness(value);
 }
 
 // ------ Function rgbSetBrightness ------
-void rgbCarSetBrightness(int value)
+void ledCarSetBrightness(int value)
 {
   rgbCar.setBrightness(value);
 }
 
 // ------ Function rgb Num RGB ------
-void rgbSetColor(int numPin, int r, int g, int b)
+void ledSetColorRGB(int numPin, int r, int g, int b)
 {
   rgb.setPixelColor(numPin, rgb.Color(r, g, b));
   rgb.show();
 }
 
 // ------ Function rgb Num Colors ------
-void rgbSetColor(int numPin, uint32_t cc)
+void ledSetColor(int numPin, uint32_t cc)
 {
   rgb.setPixelColor(numPin, cc);
   rgb.show();
 }
 
 // ------ Function rgbCar Num RGB ------
-void rgbSetColorCar(int numPin, int r, int g, int b)
+void ledCarSetColorRGB(int numPin, int r, int g, int b)
 {
   rgbCar.setPixelColor(numPin, rgbCar.Color(r, g, b));
   rgbCar.show();
 }
 
 // ------ Function rgbCar Num Colors ------
-void rgbSetColorCar(int numPin, uint32_t cc)
+void ledCarSetColor(int numPin, uint32_t cc)
 {
   rgbCar.setPixelColor(numPin,cc);
   rgbCar.show();
 }
 
 // ------ Function rgbFillBoard RGB ------
-void rgbFill(int r, int g, int b)
+void ledFillRGB(int r, int g, int b)
 {
   for (int i = 0; i <= RGB_COUNT_BOARD; i++)
   {
@@ -81,7 +81,7 @@ void rgbFill(int r, int g, int b)
 }
 
 // ------ Function rgbFillBoard Color ------
-void rgbFill(uint32_t cc)
+void ledFillColor(uint32_t cc)
 {
   for (int i = 0; i <= RGB_COUNT_BOARD; i++)
   {
@@ -91,7 +91,7 @@ void rgbFill(uint32_t cc)
 }
 
 // ------ Function rgbFillCar RGB ------
-void rgbFillCar(int r, int g, int b)
+void ledCarFillRGB(int r, int g, int b)
 {
   for (int i = 0; i <= RGB_COUNT_CAR; i++)
   {
@@ -101,7 +101,7 @@ void rgbFillCar(int r, int g, int b)
 }
 
 // ------ Function rgbFillCar Color ------
-void rgbFillCar(uint32_t cc)
+void ledCarFillColor(uint32_t cc)
 {
   for (int i = 0; i <= RGB_COUNT_CAR; i++)
   {
@@ -133,7 +133,7 @@ void rainbowCar(int wait)
 }
 
 // ------ Function ColorWipe RGB ------
-void colorWipe(int r, int g, int b, int wait)
+void colorWipeRGB(int r, int g, int b, int wait)
 {
   for (int i = 0; i < rgb.numPixels(); i++)
   {                                                   
@@ -155,7 +155,7 @@ void colorWipe(uint32_t cc, int wait)
 }
 
 // ------ Function ColorWipeCar RGB ------
-void colorWipeCar(int r, int g, int b, int wait)
+void colorWipeCarRGB(int r, int g, int b, int wait)
 {
   for (int i = 0; i < rgbCar.numPixels(); i++)
   {                                                   

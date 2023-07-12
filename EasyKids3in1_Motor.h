@@ -6,65 +6,75 @@ int currentPos[6]; // current positions for 6 servos numbered 1 - 6
 // ------ Function Motor ------
 void motor(int num, int speedM)
 {
-  if (speedM > 0)
-  {
-    int mapSpeed = map(speedM, 0, 100, 0, 4095);
-    if (num == 1)
+   int mapSpeed;
+    if (num == 1 && speedM > 0)
     {
+      mapSpeed = map(speedM, 0, 100, 0, 4095);
       pwm.setPWM(0, mapSpeed, 0);
       pwm.setPWM(1, 0, 4095);
     }
-    if (num == 2)
+    else if (num == 1 && speedM < 0)
     {
-      pwm.setPWM(2, mapSpeed, 0);
-      pwm.setPWM(3, 0, 4095);
-    }
-    if (num == 3)
-    {
-      pwm.setPWM(4, mapSpeed, 0);
-      pwm.setPWM(5, 0, 4095);
-    }
-    if (num == 4)
-    {
-      pwm.setPWM(6, mapSpeed, 0);
-      pwm.setPWM(7, 0, 4095);
-    }
-  }
-  else if (speedM < 0)
-  {
-    int mapSpeed = map(speedM, 0, -100, 0, 4095);
-    if (num == 1)
-    {
+      mapSpeed = map(speedM, 0, -100, 0, 4095);
       pwm.setPWM(0, 0, 4095);
       pwm.setPWM(1, mapSpeed, 0);
     }
-    if (num == 2)
+    else if (num == 1 && speedM == 0)
     {
+      pwm.setPWM(0, 0, 4095);
+      pwm.setPWM(1, 0, 4095);
+    }
+    else if (num == 2 && speedM > 0)
+    {
+      mapSpeed = map(speedM, 0, 100, 0, 4095);
+      pwm.setPWM(2, mapSpeed, 0);
+      pwm.setPWM(3, 0, 4095);
+    }
+    else if (num == 2 && speedM < 0)
+    {
+      mapSpeed = map(speedM, 0, -100, 0, 4095);
       pwm.setPWM(2, 0, 4095);
       pwm.setPWM(3, mapSpeed, 0);
     }
-    if (num == 3)
+    else if (num == 2 && speedM == 0)
     {
+      pwm.setPWM(2, 0, 4095);
+      pwm.setPWM(3, 0, 4095);
+    }
+    else if (num == 3 && speedM > 0)
+    {
+      mapSpeed = map(speedM, 0, 100, 0, 4095);
+      pwm.setPWM(4, mapSpeed, 0);
+      pwm.setPWM(5, 0, 4095);
+    }
+    else if (num == 3 && speedM < 0)
+    {
+      mapSpeed = map(speedM, 0, -100, 0, 4095);
       pwm.setPWM(4, 0, 4095);
       pwm.setPWM(5, mapSpeed, 0);
     }
-    if (num == 4)
+    else if (num == 3 && speedM == 0)
     {
+      pwm.setPWM(4, 0, 4095);
+      pwm.setPWM(5, 0, 4095);
+    }
+    else if (num == 4 && speedM > 0)
+    {
+      mapSpeed = map(speedM, 0, 100, 0, 4095);
+      pwm.setPWM(6, mapSpeed, 0);
+      pwm.setPWM(7, 0, 4095);
+    }
+    else if (num == 4 && speedM < 0)
+    {
+      mapSpeed = map(speedM, 0, -100, 0, 4095);
       pwm.setPWM(6, 0, 4095);
       pwm.setPWM(7, mapSpeed, 0);
     }
-  }
-  else if (speedM == 0)
-  {
-    pwm.setPWM(0, 0, 0);
-    pwm.setPWM(1, 0, 0);
-    pwm.setPWM(2, 0, 0);
-    pwm.setPWM(3, 0, 0);
-    pwm.setPWM(4, 0, 0);
-    pwm.setPWM(5, 0, 0);
-    pwm.setPWM(6, 0, 0);
-    pwm.setPWM(7, 0, 0);
-  }
+    else if (num == 4 && speedM == 0)
+    {
+      pwm.setPWM(6, 0, 4095);
+      pwm.setPWM(7, 0, 4095);
+    }
 }
 
 // ------ Function MotorStopAll ------
