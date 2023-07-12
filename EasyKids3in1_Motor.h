@@ -77,6 +77,62 @@ void motor(int num, int speedM)
     }
 }
 
+void forward(int speedM){
+  motor(1,speedM);
+  motor(2,speedM);
+  motor(3,speedM);
+  motor(4,speedM);
+}
+
+void backward(int speedM){
+  motor(1,-speedM);
+  motor(2,-speedM);
+  motor(3,-speedM);
+  motor(4,-speedM);
+}
+
+void turnLeft(int speedM){
+  motor(1,0);
+  motor(2,0);
+  motor(3,speedM);
+  motor(4,speedM);
+}
+
+void turnRight(int speedM){
+  motor(1,speedM);
+  motor(2,speedM);
+  motor(3,0);
+  motor(4,0);
+}
+
+void spinLeft(int speedM){
+  motor(1,-speedM);
+  motor(2,-speedM);
+  motor(3,speedM);
+  motor(4,speedM);
+}
+
+void spinRight(int speedM){
+  motor(1,speedM);
+  motor(2,speedM);
+  motor(3,-speedM);
+  motor(4,-speedM);
+}
+
+void slideRight(int speedM){
+  motor(1,speedM);
+  motor(2,-speedM);
+  motor(3,-speedM);
+  motor(4,speedM);
+}
+
+void slideLeft(int speedM){
+  motor(1,-speedM);
+  motor(2,speedM);
+  motor(3,speedM);
+  motor(4,-speedM);
+}
+
 // ------ Function MotorStopAll ------
 void motorStopAll()
 {
@@ -89,6 +145,8 @@ void motorStopAll()
   pwm.setPWM(6, 0, 4095);
   pwm.setPWM(7, 0, 4095);
 }
+
+
 
 // ------ Function Servo ------
 void servo(int pin, uint16_t degree)
@@ -118,34 +176,4 @@ void servo(int pin, uint16_t degree)
   {
     pwm.setPWM(13, 0, mapServo);
   }
-}
-
-// Checks to see if a move is needed using currentPos[]
-// if so it uses for loop to move to position given in 'to' argument
-// speed of the move is controlled by delayTime smaller delay = faster move
-
-void speedServo(int servoNum, int delayTime, int to)
-{
-
-  if (currentPos[servoNum] == to)
-    return; // Nothing to do if it's already there
-
-  else if (to > currentPos[servoNum])
-  {
-    for (int i = currentPos[servoNum]; i < to; i++)
-    {
-      servo(servoNum, i);
-      delay(map(delayTime, 100, 0, 0, 1000));
-      //  delay(delayTime);
-    }
-  }
-  else if (currentPos[servoNum] > to)
-  {
-    for (int i = currentPos[servoNum]; i > to; i--)
-    {
-      servo(servoNum, i);
-      delay(map(delayTime, 100, 0, 0, 1000));
-    }
-  }
-  currentPos[servoNum] = to; // save the current servo position
 }

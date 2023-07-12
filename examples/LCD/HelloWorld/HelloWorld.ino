@@ -1,6 +1,16 @@
 #include <EasyKids3in1Robot.h>
 
-/* <<<<<<<<< TFT Color >>>>>>>>>
+/* 
+display3in1();
+displayClear();
+display.fillScreen(Color);
+display.setRotation(value);
+display.setCursor(x, y);
+display.setTextSize(value); 
+display.setTextColor(Color1, Color2);
+display.print(value);
+
+<<<<<<<<< TFT Color >>>>>>>>>
 TFT_BLACK 
 TFT_NAVY 
 TFT_DARKGREEN 
@@ -24,9 +34,11 @@ TFT_PINK
 
 void setup() {
   EasyKids_Setup();
+  display.setRotation(0);
 }
 
 void loop() {
+
   display.setTextSize(3);
   display.setCursor(0, 20);
   display.setTextColor(TFT_PINK);

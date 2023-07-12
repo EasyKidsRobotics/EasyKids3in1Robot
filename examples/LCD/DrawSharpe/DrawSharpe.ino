@@ -1,18 +1,38 @@
 #include <EasyKids3in1Robot.h>
 
-/*display.drawLine(x1, y1, x2, y2, TFT_BLUE);
-display.drawFastHLine(x, y, w, TFT_MAROON)
-display.drawFastVLine(x, y, h, TFT_GREEN)
-display.drawRect(x, y, w, h, TFT_WHITE);
-display.fillRect(x, y, w, h, TFT_PINK);
-display.drawRoundRect(x, y, w, h, r, TFT_GREEN);
-display.fillRoundRect(x, y, w, h, r, TFT_YELLOW);
-display.drawCircle(x, y, r, TFT_RED);
-display.fillCircle(x, y, r, TFT_MAGENTA);
-display.drawEllipse(x, y, rx, ry,TFT_ORANGE);
-display.fillEllipse(x, y, rx, ry,TFT_CYAN);
-display.drawTriangle(x1, y1, x2, y2, ,x3, y3, TFT_OLIVE);
-display.fillTriangle(x1, y1, x2, y2, ,x3, y3, TFT_PURPLE);*/
+/*
+display.drawLine(x1, y1, x2, y2, color);
+display.drawFastHLine(x, y, w, color)
+display.drawFastVLine(x, y, h, color)
+display.drawRect(x, y, w, h, color);
+display.fillRect(x, y, w, h, color);
+display.drawRoundRect(x, y, w, h, radius, color);
+display.fillRoundRect(x, y, w, h, radius, color);
+display.drawCircle(x, y, radius, color);
+display.fillCircle(x, y, radius, color);
+display.drawTriangle(x1, y1, x2, y2, x3, y3, color);
+
+<<<<<<<<< TFT Color >>>>>>>>>
+TFT_BLACK 
+TFT_NAVY 
+TFT_DARKGREEN 
+TFT_DARKCYAN 
+TFT_MAROON 
+TFT_PURPLE 
+TFT_OLIVE 
+TFT_LIGHTGREY 
+TFT_DARKGREY 
+TFT_BLUE 
+TFT_GREEN 
+TFT_CYAN 
+TFT_RED 
+TFT_MAGENTA 
+TFT_YELLOW
+TFT_WHITE 
+TFT_ORANGE 
+TFT_GREENYELLOW 
+TFT_PINK 
+*/
 
 void setup() {
   EasyKids_Setup();
