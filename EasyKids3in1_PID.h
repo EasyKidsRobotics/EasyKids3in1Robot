@@ -9,12 +9,12 @@ int valSensor6;
 int rightMotor;
 int leftMotor;
 int NumSensor = 7;
-int Pin_Setup[] = {0, 1, 2, 3, 4, 5, 6};
-int Sensor_Min[] = {10, 10, 10, 10, 10, 10, 10};
-int Sensor_Max[] = {4000, 4000, 4000, 4000, 4000, 4000, 4000};
+int Pin_Setup[] = { 0, 1, 2, 3, 4, 5, 6 };
+int Sensor_Min[] = { 10, 10, 10, 10, 10, 10, 10 };
+int Sensor_Max[] = { 4000, 4000, 4000, 4000, 4000, 4000, 4000 };
 uint16_t stateOnLine = 0;
-float KP ;
-float KD ;
+float KP;
+float KD;
 uint16_t setPoint;
 uint32_t lastPosition;
 float errors = 0;
@@ -22,8 +22,7 @@ float output = 0;
 float derivative;
 float previous_error;
 
-void setSensorMin(int S0, int S1, int S2, int S3, int S4, int S5, int S6)
-{
+void setSensorMin(int S0, int S1, int S2, int S3, int S4, int S5, int S6) {
   Sensor_Min[0] = S0;
   Sensor_Min[1] = S1;
   Sensor_Min[2] = S2;
@@ -32,8 +31,7 @@ void setSensorMin(int S0, int S1, int S2, int S3, int S4, int S5, int S6)
   Sensor_Min[5] = S5;
   Sensor_Min[6] = S6;
 }
-void setSensorMax(int S0, int S1, int S2, int S3, int S4, int S5, int S6)
-{
+void setSensorMax(int S0, int S1, int S2, int S3, int S4, int S5, int S6) {
   Sensor_Max[0] = S0;
   Sensor_Max[1] = S1;
   Sensor_Max[2] = S2;
@@ -49,7 +47,7 @@ int readline() {
   long avg = 0;
   long sum = 0;
   for (uint8_t i = 0; i < NumSensor; i++) {
-    long value = map(analog(Pin_Setup[i]), Sensor_Min[i], Sensor_Max[i], 1000, 0);  
+    long value = map(analog(Pin_Setup[i]), Sensor_Min[i], Sensor_Max[i], 1000, 0);
     if (value > 500) {
       onLine = true;
     }
@@ -101,7 +99,7 @@ void trackPID(int setSpeed, float iKP, float iKD) {
   motor(4, rightMotor);
 }
 
-void trackLineTime(int setSpeed, float iKP, float iKD, int setTime) {
+void lineTrackTime(int setSpeed, float iKP, float iKD, int setTime) {
   long timer = 0;
   timer = millis();
   do {
@@ -111,8 +109,8 @@ void trackLineTime(int setSpeed, float iKP, float iKD, int setTime) {
   motor(4, 0);
 }
 
-void trackCrossLine(int setSpeed, float iKP, float iKD) {
-  while (analog(0) > Sensor_Min[0] + 1000  || analog(6) > Sensor_Min[6] + 1000){
+void lineTrackCross(int setSpeed, float iKP, float iKD) {
+  while (analog(0) > Sensor_Min[0] + 1000 || analog(6) > Sensor_Min[6] + 1000) {
     trackPID(setSpeed, iKP, iKD);
   }
   delay(30);
@@ -120,49 +118,46 @@ void trackCrossLine(int setSpeed, float iKP, float iKD) {
   motor(4, 0);
 }
 
-void trackDicularLeft(int setSpeed, float iKP, float iKD) {
+void lineDicularLeft(int setSpeed, float iKP, float iKD) {
   do {
     trackPID(setSpeed, iKP, iKD);
-  } while (analog(4) > Sensor_Min[4]  || analog(5) > Sensor_Min[5]  || analog(6) > Sensor_Min[6]);
+  } while (analog(4) > Sensor_Min[4] || analog(5) > Sensor_Min[5] || analog(6) > Sensor_Min[6]);
   motor(1, 0);
   motor(4, 0);
 }
 
-void trackDicularRight(int setSpeed, float iKP, float iKD) {
+void lineDicularRight(int setSpeed, float iKP, float iKD) {
   do {
     trackPID(setSpeed, iKP, iKD);
-  } while (analog(0) > Sensor_Min[0]  || analog(1) > Sensor_Min[1]  || analog(2) > Sensor_Min[2]);
+  } while (analog(0) > Sensor_Min[0] || analog(1) > Sensor_Min[1] || analog(2) > Sensor_Min[2]);
   motor(1, 0);
   motor(4, 0);
 }
-void trackTurnLeft(){
-    motor(1,-50);
-    motor(4,50);
-    delay(20);
-  do{
-    motor(1,-50);
-    motor(4,50);
-  }  
-  while(analog(6) > Sensor_Min[6] + 1000 );
+void lineTurnLeft(int speedM) {
+  motor(1, -speedM);
+  motor(4, speedM);
+  delay(20);
+  do {
+    motor(1, -speedM);
+    motor(4, speedM);
+  } while (analog(6) > Sensor_Min[6] + 1000);
   motor(1, 0);
   motor(4, 0);
 }
-void trackTurnRight(){
-  motor(1,50);
-    motor(4,-50);
-    delay(20);
-  do{
-    motor(1,50);
-    motor(4,-50);
-  }  
-  while(analog(0) > Sensor_Min[0] + 1000 );
+void lineTurnRight(int speedM) {
+  motor(1, speedM);
+  motor(4, -speedM);
+  delay(20);
+  do {
+    motor(1, speedM);
+    motor(4, -speedM);
+  } while (analog(0) > Sensor_Min[0] + 1000);
   motor(1, 0);
   motor(4, 0);
 }
-void readSensor()
-{
+void readSensor() {
   displayClear();
-  while(1){
+  while (1) {
     display.setTextFont(GLCD);
     display.setTextSize(2);
     display.setCursor(15, 5);

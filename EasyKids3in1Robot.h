@@ -41,3 +41,25 @@ void EasyKids_Setup(){
     delay(10);
 }
 
+void EasyKidsLineTrack_Setup(){
+    Serial.begin(115200);
+    display.begin();
+    displayClear();
+    rgb.begin();
+    rgbCar.begin();
+    ledSetBrightness(20);
+    ledFillColor(BLACK);
+    ledCarFillColor(BLACK);
+    pwm.begin();
+    pinMode(sw, INPUT);
+    pinMode(BUZZER, OUTPUT);
+    pwm.setPWMFreq(5000);
+    pwm.setPWM(0, 0, 0);
+    pwm.setPWM(1, 0, 0);
+    pwm.setPWM(2, 0, 0);
+    pwm.setPWM(3, 0, 0);
+    pwm.setPWM(4, 0, 0);
+    pwm.setPWM(5, 0, 0);
+    pwm.setPWM(6, 0, 0);
+    pwm.setPWM(7, 0, 0);
+}
