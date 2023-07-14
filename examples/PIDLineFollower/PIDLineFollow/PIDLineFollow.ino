@@ -20,8 +20,8 @@ Connect Motot Right >>> M2
 void setup() {
   EasyKidsLineFollow_Setup();
   display3in1();
-  setSensorMin(975, 900, 385, 1229, 912, 723, 688);  // Value Line Black A0 A1 A2 A3 A4 A5 A6
-  setSensorMax(4023, 3875, 2380, 4065, 4023, 3460, 3226);  // Value Line White A0 A1 A2 A3 A4 A5 A6
+  setSensorMin(975, 900, 385, 1229, 912, 723, 688);  // Black Line Value >>> A0 A1 A2 A3 A4 A5 A6
+  setSensorMax(4023, 3875, 2380, 4065, 4023, 3460, 3226);  // White Line Value >>> A0 A1 A2 A3 A4 A5 A6
 }
 
 void loop() {
