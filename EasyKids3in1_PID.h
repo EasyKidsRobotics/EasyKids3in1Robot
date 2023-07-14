@@ -99,7 +99,7 @@ void trackPID(int setSpeed, float iKP, float iKD) {
   motor(4, rightMotor);
 }
 
-void lineTrackTime(int setSpeed, float iKP, float iKD, int setTime) {
+void lineFollowTime(int setSpeed, float iKP, float iKD, int setTime) {
   long timer = 0;
   timer = millis();
   do {
@@ -109,7 +109,7 @@ void lineTrackTime(int setSpeed, float iKP, float iKD, int setTime) {
   motor(4, 0);
 }
 
-void lineTrackCross(int setSpeed, float iKP, float iKD) {
+void lineFollowCross(int setSpeed, float iKP, float iKD) {
   while (analog(0) > Sensor_Min[0] + 1000 || analog(6) > Sensor_Min[6] + 1000) {
     trackPID(setSpeed, iKP, iKD);
   }

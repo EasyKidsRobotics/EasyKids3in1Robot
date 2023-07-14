@@ -41,7 +41,7 @@ void EasyKids_Setup(){
     delay(10);
 }
 
-void EasyKidsLineTrack_Setup(){
+void EasyKidsLineFollow_Setup(){
     Serial.begin(115200);
     display.begin();
     displayClear();
