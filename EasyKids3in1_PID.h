@@ -9,9 +9,9 @@ int valSensor6;
 int rightMotor;
 int leftMotor;
 int NumSensor = 7;
-int Pin_Setup[] = {0, 1, 2, 3, 4, 5, 6, 7};
-int Sensor_Min[] = {10, 10, 10, 10, 10, 10, 10, 10};
-int Sensor_Max[] = {4000, 4000, 4000, 4000, 4000, 4000, 4000, 4000};
+int Pin_Setup[] = {0, 1, 2, 3, 4, 5, 6};
+int Sensor_Min[] = {10, 10, 10, 10, 10, 10, 10};
+int Sensor_Max[] = {4000, 4000, 4000, 4000, 4000, 4000, 4000};
 uint16_t stateOnLine = 0;
 float KP ;
 float KD ;
@@ -50,7 +50,7 @@ int readline() {
   long sum = 0;
   for (uint8_t i = 0; i < NumSensor; i++) {
     long value = map(analog(Pin_Setup[i]), Sensor_Min[i], Sensor_Max[i], 1000, 0);  
-    if (value > 200) {
+    if (value > 500) {
       onLine = true;
     }
     if (value > 50) {
@@ -78,24 +78,24 @@ void trackPID(int setSpeed, float iKP, float iKD) {
   derivative = (errors - previous_error);
   output = ((KP * errors) + (KD * derivative)) / 100;
   previous_error = errors;
-  if (output > speed) {
-    output = speed;
-  } else if (output < 0 - speed) {
-    output = 0 - speed;
+  if (output > 70) {
+    output = 70;
+  } else if (output < -70) {
+    output = -70;
   }
   leftMotor = speed - output;
   rightMotor = speed + output;
-  if (leftMotor >= 100) {
-    leftMotor = 100;
+  if (leftMotor >= 70) {
+    leftMotor = 70;
   }
   if (leftMotor <= 0) {
-    leftMotor = -70;
+    leftMotor = -20;
   }
-  if (rightMotor >= 100) {
-    rightMotor = 100;
+  if (rightMotor >= 70) {
+    rightMotor = 70;
   }
   if (rightMotor <= 0) {
-    rightMotor = -70;
+    rightMotor = -20;
   }
   motor(1, leftMotor);
   motor(4, rightMotor);
@@ -161,101 +161,104 @@ void trackTurnRight(){
 }
 void readSensor()
 {
-  display.setTextFont(GLCD);
-  display.setTextSize(2);
-  display.setCursor(15, 5);
-  display.setTextColor(0xF81F);
-  display.print("Read Sensor 0 - 6");
-  // ------- Sensor 0 -------
-  display.setTextFont(GLCD);
-  display.setTextSize(2);
-  display.setCursor(20, 30);
-  display.setTextColor(0x0);
-  display.print("Sensor(0) = ");
-  display.print(valSensor0);
-  valSensor0 = analog(0);
-  display.setTextSize(2);
-  display.setCursor(20, 30);
-  display.setTextColor(0x07FF);
-  display.print("Sensor(0) = ");
-  display.print(valSensor0);
-  // ------- Sensor 1 -------
-  display.setTextFont(GLCD);
-  display.setTextSize(2);
-  display.setCursor(20, 60);
-  display.setTextColor(0x0);
-  display.print("Sensor(1) = ");
-  display.print(valSensor1);
-  valSensor1 = analog(1);
-  display.setTextSize(2);
-  display.setCursor(20, 60);
-  display.setTextColor(0x07FF);
-  display.print("Sensor(1) = ");
-  display.print(valSensor1);
-  // ------- Sensor 2 -------
-  display.setTextFont(GLCD);
-  display.setTextSize(2);
-  display.setCursor(20, 90);
-  display.setTextColor(0x0);
-  display.print("Sensor(2) = ");
-  display.print(valSensor2);
-  valSensor2 = analog(2);
-  display.setTextSize(2);
-  display.setCursor(20, 90);
-  display.setTextColor(0x07FF);
-  display.print("Sensor(2) = ");
-  display.print(valSensor2);
-  // ------- Sensor 3 -------
-  display.setTextFont(GLCD);
-  display.setTextSize(2);
-  display.setCursor(20, 120);
-  display.setTextColor(0x0);
-  display.print("Sensor(3) = ");
-  display.print(valSensor3);
-  valSensor3 = analog(3);
-  display.setTextSize(2);
-  display.setCursor(20, 120);
-  display.setTextColor(0x07FF);
-  display.print("Sensor(3) = ");
-  display.print(valSensor3);
-  // ------- Sensor 4 -------
-  display.setTextFont(GLCD);
-  display.setTextSize(2);
-  display.setCursor(20, 150);
-  display.setTextColor(0x0);
-  display.print("Sensor(4) = ");
-  display.print(valSensor4);
-  valSensor4 = analog(4);
-  display.setTextSize(2);
-  display.setCursor(20, 150);
-  display.setTextColor(0x07FF);
-  display.print("Sensor(4) = ");
-  display.print(valSensor4);
-  // ------- Sensor 5 -------
-  display.setTextFont(GLCD);
-  display.setTextSize(2);
-  display.setCursor(20, 180);
-  display.setTextColor(0x0);
-  display.print("Sensor(5) = ");
-  display.print(valSensor5);
-  valSensor5 = analog(5);
-  display.setTextSize(2);
-  display.setCursor(20, 180);
-  display.setTextColor(0x07FF);
-  display.print("Sensor(5) = ");
-  display.print(valSensor5);
-  // ------- Sensor 6 -------
-  display.setTextFont(GLCD);
-  display.setTextSize(2);
-  display.setCursor(20, 210);
-  display.setTextColor(0x0);
-  display.print("Sensor(6) = ");
-  display.print(valSensor6);
-  valSensor6 = analog(6);
-  display.setTextSize(2);
-  display.setCursor(20, 210);
-  display.setTextColor(0x07FF);
-  display.print("Sensor(6) = ");
-  display.print(valSensor6);
-  delay(50);
+  displayClear();
+  while(1){
+    display.setTextFont(GLCD);
+    display.setTextSize(2);
+    display.setCursor(15, 5);
+    display.setTextColor(0xF81F);
+    display.print("Read Sensor 0 - 6");
+    // ------- Sensor 0 -------
+    display.setTextFont(GLCD);
+    display.setTextSize(2);
+    display.setCursor(20, 30);
+    display.setTextColor(0x0);
+    display.print("Sensor(0) = ");
+    display.print(valSensor0);
+    valSensor0 = analog(0);
+    display.setTextSize(2);
+    display.setCursor(20, 30);
+    display.setTextColor(0x07FF);
+    display.print("Sensor(0) = ");
+    display.print(valSensor0);
+    // ------- Sensor 1 -------
+    display.setTextFont(GLCD);
+    display.setTextSize(2);
+    display.setCursor(20, 60);
+    display.setTextColor(0x0);
+    display.print("Sensor(1) = ");
+    display.print(valSensor1);
+    valSensor1 = analog(1);
+    display.setTextSize(2);
+    display.setCursor(20, 60);
+    display.setTextColor(0x07FF);
+    display.print("Sensor(1) = ");
+    display.print(valSensor1);
+    // ------- Sensor 2 -------
+    display.setTextFont(GLCD);
+    display.setTextSize(2);
+    display.setCursor(20, 90);
+    display.setTextColor(0x0);
+    display.print("Sensor(2) = ");
+    display.print(valSensor2);
+    valSensor2 = analog(2);
+    display.setTextSize(2);
+    display.setCursor(20, 90);
+    display.setTextColor(0x07FF);
+    display.print("Sensor(2) = ");
+    display.print(valSensor2);
+    // ------- Sensor 3 -------
+    display.setTextFont(GLCD);
+    display.setTextSize(2);
+    display.setCursor(20, 120);
+    display.setTextColor(0x0);
+    display.print("Sensor(3) = ");
+    display.print(valSensor3);
+    valSensor3 = analog(3);
+    display.setTextSize(2);
+    display.setCursor(20, 120);
+    display.setTextColor(0x07FF);
+    display.print("Sensor(3) = ");
+    display.print(valSensor3);
+    // ------- Sensor 4 -------
+    display.setTextFont(GLCD);
+    display.setTextSize(2);
+    display.setCursor(20, 150);
+    display.setTextColor(0x0);
+    display.print("Sensor(4) = ");
+    display.print(valSensor4);
+    valSensor4 = analog(4);
+    display.setTextSize(2);
+    display.setCursor(20, 150);
+    display.setTextColor(0x07FF);
+    display.print("Sensor(4) = ");
+    display.print(valSensor4);
+    // ------- Sensor 5 -------
+    display.setTextFont(GLCD);
+    display.setTextSize(2);
+    display.setCursor(20, 180);
+    display.setTextColor(0x0);
+    display.print("Sensor(5) = ");
+    display.print(valSensor5);
+    valSensor5 = analog(5);
+    display.setTextSize(2);
+    display.setCursor(20, 180);
+    display.setTextColor(0x07FF);
+    display.print("Sensor(5) = ");
+    display.print(valSensor5);
+    // ------- Sensor 6 -------
+    display.setTextFont(GLCD);
+    display.setTextSize(2);
+    display.setCursor(20, 210);
+    display.setTextColor(0x0);
+    display.print("Sensor(6) = ");
+    display.print(valSensor6);
+    valSensor6 = analog(6);
+    display.setTextSize(2);
+    display.setCursor(20, 210);
+    display.setTextColor(0x07FF);
+    display.print("Sensor(6) = ");
+    display.print(valSensor6);
+    delay(50);
+  }
 }

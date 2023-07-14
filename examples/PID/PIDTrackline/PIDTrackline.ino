@@ -12,15 +12,24 @@
   trackTurnRight();
 */
 
+#include <EasyKids3in1Robot.h>
+
 void setup() {
   EasyKids_Setup();
-  setSensorMin(379, 360, 272, 503, 326, 318, 255); // Value Line Black
-  setSensorMax(1945, 2102, 1984, 2451, 1954, 2208, 1815); // Value Line White
-  waitForStart();
-  trackLineTime (50, 0.3, 0.23, 3000);
-  trackCrossLine(50, 0.3, 0.23);
+  display3in1();
+  setSensorMin(975, 900, 385, 1229, 912, 723, 688);  // Value Line Black
+  setSensorMax(4023, 3875, 2380, 4065, 4023, 3460, 3226);  // Value Line White
+  pwm.setPWMFreq(5000);
+  
 }
 
 void loop() {
-  
+
+  // readSensor();  //Show Value 7 Sensor via LCD Display
+  waitForStart();
+  trackLineTime(20, 1, 1, 1000);
+  trackLineTime(30, 1, 1, 5000);
+  trackLineTime(35, 1, 1, 5000);
+ 
 }
+
