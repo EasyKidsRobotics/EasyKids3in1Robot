@@ -7,8 +7,8 @@ Connect Motot Right >>> M2
 
 <<<<< Command >>>>>
   readSensor();
-  setSensorMin(s1, s2, s3, s4, s5, s6, s7);
-  setSensorMax(s1, s2, s3, s4, s5, s6, s7);
+  setSensorMin(s0, s1, s2, s3, s4, s5, s6);
+  setSensorMax(s0, s1, s2, s3, s4, s5, s6);
   lineFollowTime (Speed, KP, KD, Time);
   lineFollowCross(Speed, KP, KD);
   lineDicularLeft(Speed, KP, KD);
