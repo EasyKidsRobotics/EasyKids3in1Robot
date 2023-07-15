@@ -22,7 +22,7 @@
 1. เลือกบอร์ด 
 1. เลือก Library ลงในโค้ด
 
-## **การเพิ่มบอร์ด ESP32 ใน Arduino IDE**
+## **การเพิ่มบอร์ด 3in1EasyKids(ESP32) ใน Arduino IDE**
 (Windows) เลือกที่ File >>> preferences 
 (Mac) เลือกที่ Arduino IDE >>> Settings... 
 
