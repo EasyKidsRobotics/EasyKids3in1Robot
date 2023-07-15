@@ -24,6 +24,7 @@
 
 ## **การเพิ่มบอร์ด 3in1EasyKids(ESP32) ใน Arduino IDE**
 (Windows) เลือกที่ File >>> preferences 
+
 (Mac) เลือกที่ Arduino IDE >>> Settings... 
 
 ![image](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/ab8fcb36-e563-4370-bf43-fc291f1e1450")
