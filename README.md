@@ -28,11 +28,11 @@
 
 ![image](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/ab8fcb36-e563-4370-bf43-fc291f1e1450")
 
-ในช่อง Additional boards managers URLS: จะนำลิงค์ข้อมูลบอร์ดลงไปใส่
+ในช่อง Additional boards managers URLS: จะนำ Link ข้อมูลบอร์ดลงไปใส่
 
 ![image](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/7d5f8ea0-6864-40d6-b10d-e8a0b444fc1b")
 
-กรอกข้อมูลของบอร์ด 2 ลิงค์ได้แก่
+กรอกข้อมูลของบอร์ด 2 Link ได้แก่
 
 * Official ESP32 package: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 
