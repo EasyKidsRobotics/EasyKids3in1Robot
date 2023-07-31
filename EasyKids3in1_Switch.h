@@ -4,7 +4,6 @@
 // ------ Function Wait_Start ------
 void waitForStart() {
   while (digitalRead(0) == 1) {}
-  delay(200);
 }
 // ------ Function Sw_Start ------
 int sw_Start()
