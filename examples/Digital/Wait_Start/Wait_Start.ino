@@ -5,6 +5,6 @@ void setup() {
 }
 
 void loop() {
-  wait_Start();
+  waitForStart();
   beep();
 }
