@@ -362,4 +362,5 @@ void christmasSong()
 void beep(){
 	tone(BUZZER,500,100);
 	noTone(BUZZER);
+	delay(200);
 }
