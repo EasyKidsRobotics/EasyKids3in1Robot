@@ -1,7 +1,7 @@
 #include <EasyKids3in1Robot.h>
 
 void setup() {
-  EasyKids_Setup();
+  EasyKidsJoystick_Setup();
   display3in1();
   welcomeSong();
 }
