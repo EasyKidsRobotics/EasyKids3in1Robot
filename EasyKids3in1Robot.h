@@ -52,7 +52,7 @@ void EasyKidsLineFollower_Setup(){
     pwm.begin();
     pinMode(sw, INPUT);
     pinMode(BUZZER, OUTPUT);
-    pwm.setPWMFreq(5000);
+    pwm.setPWMFreq(1000);
     pwm.setPWM(0, 0, 0);
     pwm.setPWM(1, 0, 0);
     pwm.setPWM(2, 0, 0);
