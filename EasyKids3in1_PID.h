@@ -48,7 +48,6 @@ int readline() {
   long sum = 0;
   for (uint8_t i = 0; i < NumSensor; i++) {
     long value = map(analog(Pin_Setup[i]), Sensor_Min[i], Sensor_Max[i], 1000, 0);
-    value = 1000 - value;
     if (value > 500) {
       onLine = true;
     }
