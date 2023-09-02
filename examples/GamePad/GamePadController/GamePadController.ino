@@ -1,9 +1,11 @@
-#include <EasyKids3in1Robot.h>
+#include <EasyKids3in1.h>
 
 void setup() {
   EasyKids_Setup();
   display3in1();
   welcomeSong();
+  beep();
+  JoyController_Setup();
 }
 
 void loop() {

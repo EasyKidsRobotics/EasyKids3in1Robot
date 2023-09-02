@@ -1,4 +1,4 @@
-#include <EasyKids3in1Robot.h>>
+#include <EasyKids3in1.h>>
 
 void setup() {
   EasyKids_Setup();

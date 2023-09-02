@@ -1,4 +1,5 @@
 #include <Bluepad32.h>
+
 int joyLX;
 int joyLY;
 int joyRX;
@@ -56,6 +57,23 @@ void onDisconnectedGamepad(GamepadPtr gp) {
     Serial.println(
       "CALLBACK: Gamepad disconnected, but not found in myGamepads");
   }
+}
+
+void JoyController_Setup(){
+  Serial.printf("Firmware: %s\n", BP32.firmwareVersion());
+  const uint8_t *addr = BP32.localBdAddress();
+  Serial.printf("BD Addr: %2X:%2X:%2X:%2X:%2X:%2X\n", addr[0], addr[1], addr[2],
+              addr[3], addr[4], addr[5]);
+  long timer = 0;
+  timer = millis();
+  do {
+    if(sw_Start() == 0){
+      BP32.forgetBluetoothKeys();
+      break;
+    }
+  } while ((millis() - timer) < 3000);
+  BP32.setup(&onConnectedGamepad, &onDisconnectedGamepad);
+  delay(10);
 }
 
 void JoyController() {

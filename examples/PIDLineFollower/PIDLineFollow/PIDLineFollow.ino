@@ -1,4 +1,4 @@
-#include <EasyKids3in1Robot.h>
+#include <EasyKids3in1.h>
 
 /* 
 Connect Analog 7 Sensor >>> A6 A5 A4 A3 A2 A1 A0 

@@ -1,4 +1,4 @@
-#include <EasyKids3in1Robot.h>
+#include <EasyKids3in1.h>
 
 /*
 display.drawLine(x1, y1, x2, y2, color);
