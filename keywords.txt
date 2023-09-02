@@ -106,12 +106,14 @@ display3in1	KEYWORD2	Constrain
 motor	KEYWORD2
 motorStopAll	KEYWORD2
 servo	KEYWORD2	Cos
-rgbSetBrightness	KEYWORD2
-rgbCarSetBrightness	KEYWORD2
-rgbSetColor	KEYWORD2
-rgbSetColorCar	KEYWORD2
-rgbFill	KEYWORD2	Exp
-rgbFillCar	KEYWORD2
+ledSetBrightness	KEYWORD2
+ledCarSetBrightness	KEYWORD2
+ledCarSetColorRGB	KEYWORD2
+ledCarSetColor	KEYWORD2
+ledFillRGB	KEYWORD2	Exp
+ledCarFillRGB	KEYWORD2
+ledFillColor	KEYWORD2
+ledCarFillColor	KEYWORD2
 rainbow	KEYWORD2
 rainbowCar	KEYWORD2
 colorWipe	KEYWORD2
