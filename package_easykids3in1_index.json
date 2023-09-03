@@ -16,7 +16,7 @@
           "url": "https://github.com/EasyKidsRobotics/EasyKids3in1Robot/blob/main/EasyKids3in1Robot-main.zip",
           "archiveFileName": "EasyKids3in1Robot-main.zip",
           "checksum": "SHA-256:e6a4c0b37a90a922777556d3af04c0396d9fc7fc47dfa5220f3d3da2410a3bf1",
-          "size": "2381077",
+          "size": "1004929",
           "boards": [
             {
               "name": "EasyKids3in1"
