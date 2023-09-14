@@ -22,34 +22,31 @@
 1. เพิ่มบอร์ด ใน Arduino IDE 
 1. เพิ่ม Library 3in1EasyKidsRobot ใน Arduino IDE
 1. เลือกบอร์ด 
-1. เลือก Library ลงในโค้ด
 
-## **การเพิ่มบอร์ด 3in1EasyKids(ESP32) ใน Arduino IDE**
+## **การเพิ่มบอร์ด 3in1EasyKids ใน Arduino IDE**
 (Windows) เลือกที่ File >>> preferences 
 
 (Mac) เลือกที่ Arduino IDE >>> Settings... 
 
 ![image](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/ab8fcb36-e563-4370-bf43-fc291f1e1450")
 
-ในช่อง Additional boards managers URLS: จะนำ Link ข้อมูลบอร์ดลงไปใส่
+ในช่อง Additional boards managers URLS: โดย Copy Link ข้อมูลบอร์ด 3in1EasyKids ลงไปใส่ในช่อง
 
 ![image](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/7d5f8ea0-6864-40d6-b10d-e8a0b444fc1b")
 
-กรอกข้อมูลของบอร์ด 2 Link ได้แก่
+Copy Link ข้อมูลของบอร์ด 3in1EasyKids 
 
-* Official ESP32 package: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
-
-* Bluepad32 package: https://raw.githubusercontent.com/ricardoquesada/esp32-arduino-lib-builder/master/bluepad32_files/package_esp32_bluepad32_index.json
+* 3in1EasyKids Package: https://github.com/EasyKidsRobotics/arduino-easykidsrobotics/releases/download/3.8.5/package_easykidsrobotics_index.json
 
 จากนั้นกด "OK"
 
 ![image](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/19663f57-c77d-4808-b728-1fd060c99d7a")
 
-จากนั้นเลือกที่ BOARDS MANAGER พิมพ์คำว่า ESP32 ในช่องค้นหา จากนั้นให้กดคลิ๊ก "INSTALL" ทั้ง 2 อัน
+จากนั้นเลือกไปที่ BOARDS MANAGER พิมพ์คำว่า EasyKidsRobotics ในช่องค้นหา จากนั้นให้กดคลิ๊ก "INSTALL" 
 
 ![image](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/8bac720b-8660-484b-8377-2f48a72cdeb9")
 
-หลังจากที่ทำการโหลดและติดตั้งเรียบร้อยแล้ว ให้เลือกไปที่ Tools >>> Board: >>> esp32_bluepad32 >>> คลิ๊กที่ ESP32 Dev Module เป็นการเสร็จสิ้นการติดตั้งบอร์ด
+หลังจากที่ทำการโหลดและติดตั้งเรียบร้อยแล้ว จะเป็นการเลือกบอร์ด โดยให้คลิ๊กไปที่ Tools >>> Board: >>> esp32_bluepad32 >>> คลิ๊กที่ ESP32 Dev Module เป็นการเสร็จสิ้นการติดตั้งบอร์ด
 
 ![image](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/5eb60fd2-dc1e-4d7f-8fca-49f371e46e3a")
 
