@@ -24,9 +24,9 @@
 1. เลือกบอร์ด 
 
 ## **การเพิ่มบอร์ด 3in1EasyKids ใน Arduino IDE**
-(Windows) เลือกที่ File >>> preferences 
+(Windows OS) เลือกที่ File >>> preferences 
 
-(Mac) เลือกที่ Arduino IDE >>> Settings... 
+(Mac OS) เลือกที่ Arduino IDE >>> Settings... 
 
 ![Screenshot 2023-09-15 111051](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/dd8353f5-ace5-41e8-b70e-48a8405cdbff)
 
