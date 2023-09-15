@@ -44,7 +44,6 @@ Copy Link ข้อมูลของบอร์ด 3in1EasyKids
 
 จากนั้นกด "OK"
 
-![image](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/19663f57-c77d-4808-b728-1fd060c99d7a")
 
 จากนั้นเลือกไปที่ BOARDS MANAGER พิมพ์คำว่า EasyKidsRobotics ในช่องค้นหา จากนั้นให้กดคลิ๊ก "INSTALL" 
 
