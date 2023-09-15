@@ -19,17 +19,17 @@
 
 ## **How to Install**
 
-1. เพิ่มบอร์ด 3in1EasyKids ใน Arduino IDE 
-1. เลือก Library 3in1EasyKids ใน Arduino IDE
+1. เพิ่มบอร์ด EasyKids3in1 ใน Arduino IDE 
+1. เลือก Library EasyKids3in1 ใน Arduino IDE
 
-## **การเพิ่มบอร์ด 3in1EasyKids ใน Arduino IDE**
+## **การเพิ่มบอร์ด EasyKids3in1 ใน Arduino IDE**
 (Windows OS) เลือกที่ File >>> preferences 
 
 (Mac OS) เลือกที่ Arduino IDE >>> Settings... 
 
 ![Screenshot 2023-09-15 111051](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/dd8353f5-ace5-41e8-b70e-48a8405cdbff)
 
-Copy Link Package บอร์ด 3in1EasyKids 
+Copy Link Package บอร์ด EasyKids3in1 
 
 * 3in1EasyKids Package: https://github.com/EasyKidsRobotics/arduino-easykidsrobotics/releases/download/3.8.6/package_easykidsrobotics_index.json
 
@@ -47,7 +47,7 @@ Copy Link Package บอร์ด 3in1EasyKids
 
 ![Capture3](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/74772dd5-02d4-4fa7-9bfd-c6e51c59f7e9)
 
-หลังจากที่ทำการโหลดและติดตั้งบอร์ด 3in1EasyKids เรียบร้อยแล้ว ต่อไปจะเป็นการเลือกบอร์ด โดยให้คลิ๊กไปที่ Tools >>> Board: >>> EasyKidsRobotics >>> และเลือกที่ 3in1EasyKids 
+หลังจากที่ทำการโหลดและติดตั้งบอร์ด EasyKids3in1 เรียบร้อยแล้ว ต่อไปจะเป็นการเลือกบอร์ด โดยให้คลิ๊กไปที่ Tools >>> Board: >>> EasyKidsRobotics >>> และเลือกที่ EasyKids3in1 
 
 ![Screenshot 2023-09-16 023709](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/935ac13b-7056-4c36-b4df-6ca6ae9b29e6)
 
@@ -56,7 +56,7 @@ Copy Link Package บอร์ด 3in1EasyKids
 เลือกไปที่ Sketch >>> Include Library >>> แล้วเลือก EasyKids3in1
 ![Screenshot 2023-09-15 112246](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/9e650eb1-cba6-461f-a7ce-8e6ce894b77d)
 
-ทำการทดสอบด้วยการกด Verify หากไม่มี Error หรือ ตัวอักษรสีแดงใดๆ แสดงว่าการติดตั้งบอร์ด 3in1EasyKids และไบลารี่เสร็จสมบูรณ์ 100 % 
+ทำการทดสอบด้วยการกด Verify หากไม่มี Error หรือ ตัวอักษรสีแดงใดๆ แสดงว่าการติดตั้งบอร์ด EasyKids3in1 และไบลารี่เสร็จสมบูรณ์ 100 % 
 
 ![Screenshot 2023-09-15 143629](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/4472cc9e-85e5-43be-a17e-75ba8e2c6b62)
 
