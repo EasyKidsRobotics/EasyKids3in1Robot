@@ -63,10 +63,12 @@ Copy Link Package บอร์ด 3in1EasyKids
 เลือกไปที่ Sketch >>> Include Library >>> แล้วเลือก EasyKids3in1
 ![Screenshot 2023-09-15 112246](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/9e650eb1-cba6-461f-a7ce-8e6ce894b77d)
 
+ทำการทดสอบด้วยการกด Verify หากไม่มี Error หรือ ตัวอักษรสีแดงใดๆ แสดงว่าการติดตั้งบอร์ด 3in1EasyKids และไบลารี่เสร็จสมบูรณ์ 100 % 
+
 ![Screenshot 2023-09-15 143629](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/4472cc9e-85e5-43be-a17e-75ba8e2c6b62)
 
 
-## **โค้ดตัวอย่าง**
+## **ทดสอบโค้ดตัวอย่าง**
 ให้เลือกไปที่ File >>> Examples >>> EasyKids3in1 
 
 ![Screenshot 2023-09-15 112332](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/b0d5a1a2-693d-48fb-af5b-60ba2378d3e7)
