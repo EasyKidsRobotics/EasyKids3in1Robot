@@ -30,20 +30,13 @@
 
 ![Screenshot 2023-09-15 111051](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/dd8353f5-ace5-41e8-b70e-48a8405cdbff)
 
-
-ในช่อง Additional boards managers URLS: โดย Copy Link ข้อมูลบอร์ด 3in1EasyKids ลงไปใส่ในช่อง
+Copy Link ข้อมูลของบอร์ด 3in1EasyKids 
+* 3in1EasyKids Package: https://github.com/EasyKidsRobotics/arduino-easykidsrobotics/releases/download/3.8.5/package_easykidsrobotics_index.json
+ลงในช่อง Additional boards managers URLS จากนั้นกด "OK"
 
 ![Screenshot 2023-09-15 111235](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/3b153bd6-6cb8-49cb-9bb9-1c09fb380ef0)
 ![Screenshot 2023-09-15 111440](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/cfcddee7-7f79-4ed7-956d-974ff5fe78b3)
 ![Screenshot 2023-09-15 111501](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/65cb4395-d57a-4765-a880-a76cd3386108)
-
-
-Copy Link ข้อมูลของบอร์ด 3in1EasyKids 
-
-* 3in1EasyKids Package: https://github.com/EasyKidsRobotics/arduino-easykidsrobotics/releases/download/3.8.5/package_easykidsrobotics_index.json
-
-จากนั้นกด "OK"
-
 
 จากนั้นเลือกไปที่ BOARDS MANAGER พิมพ์คำว่า EasyKidsRobotics ในช่องค้นหา จากนั้นให้กดคลิ๊ก "INSTALL" 
 
