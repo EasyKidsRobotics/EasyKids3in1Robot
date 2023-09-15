@@ -19,9 +19,8 @@
 
 ## **How to Install**
 
-1. เพิ่มบอร์ด ใน Arduino IDE 
-1. เพิ่ม Library 3in1EasyKidsRobot ใน Arduino IDE
-1. เลือกบอร์ด 
+1. เพิ่มบอร์ด 3in1EasyKids ใน Arduino IDE 
+1. เลือก Library 3in1EasyKids ใน Arduino IDE
 
 ## **การเพิ่มบอร์ด 3in1EasyKids ใน Arduino IDE**
 (Windows OS) เลือกที่ File >>> preferences 
@@ -58,7 +57,7 @@ Copy Link Package บอร์ด 3in1EasyKids
 ![Screenshot 2023-09-15 112144](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/8210c916-fb4b-47e6-870b-6f0c6b97997b)
 
 
-## **การเพิ่ม Library 3in1EasyKidsRobot ใน Arduino IDE**
+## **การเพิ่ม Library EasyKids3in1 ใน Arduino IDE**
 
 เลือกไปที่ Sketch >>> Include Library >>> แล้วเลือก EasyKids3in1
 ![Screenshot 2023-09-15 112246](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/9e650eb1-cba6-461f-a7ce-8e6ce894b77d)
