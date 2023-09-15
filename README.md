@@ -31,13 +31,13 @@
 
 Copy Link Package บอร์ด 3in1EasyKids 
 
-* 3in1EasyKids Package: https://github.com/EasyKidsRobotics/arduino-easykidsrobotics/releases/download/3.8.5/package_easykidsrobotics_index.json
+* 3in1EasyKids Package: https://github.com/EasyKidsRobotics/arduino-easykidsrobotics/releases/download/3.8.6/package_easykidsrobotics_index.json
 
 ![Screenshot 2023-09-15 111235](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/3b153bd6-6cb8-49cb-9bb9-1c09fb380ef0)
 
 ใส่ลงในช่อง Additional boards managers URLS แล้วกด "OK"
 
-![Screenshot 2023-09-15 111440](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/cfcddee7-7f79-4ed7-956d-974ff5fe78b3)
+![Capture1](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/119f3cae-ed1b-4d9f-8c7b-e1b7bd0b943d)
 
 จากนั้นกด "OK"
 
@@ -45,17 +45,11 @@ Copy Link Package บอร์ด 3in1EasyKids
 
 จากนั้นเลือกไปที่ BOARDS MANAGER พิมพ์คำว่า EasyKidsRobotics ในช่องค้นหา และให้กดคลิ๊ก "INSTALL" เพื่อทำการติดตั้งและรอจนกว่าจะติดตั้งเสร็จสมบูรณ์
 
-![Screenshot 2023-09-15 111724](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/4d9a13db-a1cc-4bd1-a99c-2243daad543f)
-
-หลังจากทำการติดตั้งเสร็จสมบูรณ์แล้วจะมี Pop-Up ข้อความแสดงขึ้นมาว่าติดตั้งเสร็จเรียบร้อยแล้ว
-
-![Screenshot 2023-09-15 112005](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/da5bf892-8b90-4cda-b63e-56c40f40c2f5)
-
+![Capture3](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/74772dd5-02d4-4fa7-9bfd-c6e51c59f7e9)
 
 หลังจากที่ทำการโหลดและติดตั้งบอร์ด 3in1EasyKids เรียบร้อยแล้ว ต่อไปจะเป็นการเลือกบอร์ด โดยให้คลิ๊กไปที่ Tools >>> Board: >>> EasyKidsRobotics >>> และเลือกที่ 3in1EasyKids 
 
-![Screenshot 2023-09-15 112144](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/8210c916-fb4b-47e6-870b-6f0c6b97997b)
-
+![Screenshot 2023-09-16 023709](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/935ac13b-7056-4c36-b4df-6ca6ae9b29e6)
 
 ## **การเพิ่ม Library EasyKids3in1 ใน Arduino IDE**
 
