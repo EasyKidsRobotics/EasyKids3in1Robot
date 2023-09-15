@@ -30,15 +30,13 @@
 
 ![Screenshot 2023-09-15 111051](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/dd8353f5-ace5-41e8-b70e-48a8405cdbff)
 
-Copy Link ข้อมูลของบอร์ด 3in1EasyKids 
+Copy Link Package บอร์ด 3in1EasyKids 
 
 * 3in1EasyKids Package: https://github.com/EasyKidsRobotics/arduino-easykidsrobotics/releases/download/3.8.5/package_easykidsrobotics_index.json
 
-
-
 ![Screenshot 2023-09-15 111235](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/3b153bd6-6cb8-49cb-9bb9-1c09fb380ef0)
 
-ใส่ลงในช่อง Additional boards managers URLS 
+ใส่ลงในช่อง Additional boards managers URLS
 
 ![Screenshot 2023-09-15 111440](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/cfcddee7-7f79-4ed7-956d-974ff5fe78b3)
 
