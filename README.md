@@ -28,11 +28,15 @@
 
 (Mac) เลือกที่ Arduino IDE >>> Settings... 
 
-![image](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/ab8fcb36-e563-4370-bf43-fc291f1e1450")
+![Screenshot 2023-09-15 111051](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/dd8353f5-ace5-41e8-b70e-48a8405cdbff)
+
 
 ในช่อง Additional boards managers URLS: โดย Copy Link ข้อมูลบอร์ด 3in1EasyKids ลงไปใส่ในช่อง
 
-![image](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/7d5f8ea0-6864-40d6-b10d-e8a0b444fc1b")
+![Screenshot 2023-09-15 111235](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/3b153bd6-6cb8-49cb-9bb9-1c09fb380ef0)
+![Screenshot 2023-09-15 111440](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/cfcddee7-7f79-4ed7-956d-974ff5fe78b3)
+![Screenshot 2023-09-15 111501](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/65cb4395-d57a-4765-a880-a76cd3386108)
+
 
 Copy Link ข้อมูลของบอร์ด 3in1EasyKids 
 
@@ -44,28 +48,33 @@ Copy Link ข้อมูลของบอร์ด 3in1EasyKids
 
 จากนั้นเลือกไปที่ BOARDS MANAGER พิมพ์คำว่า EasyKidsRobotics ในช่องค้นหา จากนั้นให้กดคลิ๊ก "INSTALL" 
 
-![image](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/8bac720b-8660-484b-8377-2f48a72cdeb9")
+![Screenshot 2023-09-15 111724](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/4d9a13db-a1cc-4bd1-a99c-2243daad543f)
+![Screenshot 2023-09-15 112005](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/da5bf892-8b90-4cda-b63e-56c40f40c2f5)
+![Screenshot 2023-09-15 112005](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/2dcfe717-c523-4bd7-aa79-5b492758a4fd)
+
 
 หลังจากที่ทำการโหลดและติดตั้งเรียบร้อยแล้ว จะเป็นการเลือกบอร์ด โดยให้คลิ๊กไปที่ Tools >>> Board: >>> esp32_bluepad32 >>> คลิ๊กที่ ESP32 Dev Module เป็นการเสร็จสิ้นการติดตั้งบอร์ด
 
-![image](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/5eb60fd2-dc1e-4d7f-8fca-49f371e46e3a")
+![Screenshot 2023-09-15 112144](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/8210c916-fb4b-47e6-870b-6f0c6b97997b)
+
 
 ## **การเพิ่ม Library 3in1EasyKidsRobot ใน Arduino IDE**
 ขั้นตอนแรกให้ Download Library EasyKids3in1Robot จาก https://github.com/EasyKidsRobotics/EasyKids3in1Robot เก็บไว้ในเครื่องก่อน
 จากนั้นให้เราเลือกที่ Sketch >>> Include Library >>> Add .ZIP Library...
 
-![image](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/d804a5c0-0f5b-4614-be63-1da073d1585e")
 
 จากนั้นให้เลือกไฟล์ .ZIP ที่เรา Download มา หรืออีกหนึ่งวิธีสามารถแตกไฟล์แล้วนำไปวางใน Folder Documents >>> Arduino >>> libraries ได้เช่นกัน
 
-![image](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/2780c48d-3811-43ec-8f5a-37d8274bfffa")
 
 จากนั้นให้เลือกไปที่ Sketch >>> Include Library >>> แล้วเลือก EasyKids3in1Robot
-![image](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/eb5c7506-8281-4f8e-903e-5f3c166ed186")
+![Screenshot 2023-09-15 112246](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/9e650eb1-cba6-461f-a7ce-8e6ce894b77d)
+![Screenshot 2023-09-15 112316](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/bbf53e93-24ed-42a2-ae6b-92f3c6631a84)
+
 
 ## **โค้ดตัวอย่าง**
 ให้เลือกไปที่ File >>> Examples >>> EasyKids3in1Robot 
 
-![image](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/7199c15b-9255-4c65-83eb-bba9182038dc")
+![Screenshot 2023-09-15 112332](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/b0d5a1a2-693d-48fb-af5b-60ba2378d3e7)
+
 
 โดยโค้ดตัวอย่างจะมีการใช้งานต่างๆ ของหุ่นยนต์ เช่น Input Output Motor LCD RGB เป็นต้น 
