@@ -37,7 +37,7 @@ Package บอร์ด EasyKids3in1
 
 ใส่ลงในช่อง Additional boards managers URLS แล้วกด "OK"
 
-![Capture1](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/119f3cae-ed1b-4d9f-8c7b-e1b7bd0b943d)
+![Capture1](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/4b57629c-808c-43b6-97e4-3ff5ad9d3d06)
 
 จากนั้นกด "OK"
 
@@ -45,11 +45,11 @@ Package บอร์ด EasyKids3in1
 
 จากนั้นเลือกไปที่ BOARDS MANAGER พิมพ์คำว่า EasyKidsRobotics ในช่องค้นหา และให้กดคลิ๊ก "INSTALL" เพื่อทำการติดตั้งและรอจนกว่าจะติดตั้งเสร็จสมบูรณ์
 
-![Capture3](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/74772dd5-02d4-4fa7-9bfd-c6e51c59f7e9)
+![Capture3](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/c0286d9b-a1b0-4b04-ac25-38bc41f78094)
 
 หลังจากที่ทำการโหลดและติดตั้งบอร์ด EasyKids3in1 เรียบร้อยแล้ว ต่อไปจะเป็นการเลือกบอร์ด โดยให้คลิ๊กไปที่ Tools >>> Board: >>> EasyKidsRobotics >>> และเลือกที่ EasyKids3in1 
 
-![Screenshot 2023-09-16 023709](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/935ac13b-7056-4c36-b4df-6ca6ae9b29e6)
+![Screenshot 2023-09-16 023709](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/bc15603c-45dd-437b-84aa-6022edcc545e)
 
 ## **การเพิ่ม Library EasyKids3in1 ใน Arduino IDE**
 
