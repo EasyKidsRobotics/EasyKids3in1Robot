@@ -36,7 +36,7 @@ Copy Link Package บอร์ด 3in1EasyKids
 
 ![Screenshot 2023-09-15 111235](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/3b153bd6-6cb8-49cb-9bb9-1c09fb380ef0)
 
-ใส่ลงในช่อง Additional boards managers URLS
+ใส่ลงในช่อง Additional boards managers URLS แล้วกด "OK"
 
 ![Screenshot 2023-09-15 111440](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/cfcddee7-7f79-4ed7-956d-974ff5fe78b3)
 
@@ -44,7 +44,7 @@ Copy Link Package บอร์ด 3in1EasyKids
 
 ![Screenshot 2023-09-15 111501](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/65cb4395-d57a-4765-a880-a76cd3386108)
 
-จากนั้นเลือกไปที่ BOARDS MANAGER พิมพ์คำว่า EasyKidsRobotics ในช่องค้นหา จากนั้นให้กดคลิ๊ก "INSTALL" 
+จากนั้นเลือกไปที่ BOARDS MANAGER พิมพ์คำว่า EasyKidsRobotics ในช่องค้นหา และให้กดคลิ๊ก "INSTALL" เพื่อทำการติดตั้ง
 
 ![Screenshot 2023-09-15 111724](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/4d9a13db-a1cc-4bd1-a99c-2243daad543f)
 ![Screenshot 2023-09-15 112005](https://github.com/EasyKidsRobotics/EasyKids3in1Robot/assets/66917385/da5bf892-8b90-4cda-b63e-56c40f40c2f5)
